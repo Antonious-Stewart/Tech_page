@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+code {
+  background: #aaa;
+  width: 80%;
+  display: block;
+  padding: 4rem 5.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(29rem, 30rem) auto;
+  grid-template-areas: "navbar content" "navbar content";
+}
+.container .nav {
+  grid-area: navbar;
+  border-right: solid 4px #aaa;
+  border-bottom: solid 4px #aaa;
+  position: fixed;
+  height: 100vh;
+  width: 29rem;
+  max-width: 30rem;
+}
+.container .nav__heading {
+  font-size: 2.4em;
+  font-family: Raleway, sans-serif;
+  text-align: center;
+  font-weight: 700;
+  line-height: 3;
+  background: yellow;
+  width: 100%;
+}
+.container .nav__list {
+  list-style: none;
+  position: absolute;
+  height: 85vh;
+  width: 100%;
+  overflow-y: scroll;
+}
+.container .nav__item {
+  padding: 1.5rem 2.5rem;
+}
+.container .nav__item:not(:last-child) {
+  border-bottom: solid black 1px;
+}
+.container .nav__item:nth-child(even) {
+  background: yellow;
+}
+.container .nav__item:nth-child(even) a {
+  color: black;
+}
+.container .nav__link, .container .nav__link:link, .container .nav__link:visited {
+  text-decoration: none;
+  color: #aaa;
+  font-size: 1.4rem;
+  font-family: Raleway, sans-serif;
+  text-transform: capitalize;
+}
+.container #main-doc {
+  grid-area: content;
+  padding: 6rem 5rem;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 400;
+}
+.container #main-doc .main-section__heading {
+  font-size: 2.2rem;
+  font-family: Raleway, sans-serif;
+  text-transform: capitalize;
+  border-bottom: solid 2px #aaa;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+.container #main-doc .main-section__paragraph {
+  font-size: 1.8rem;
+  margin: 2rem 0;
+}
+.container #main-doc .main-section__list {
+  font-size: 1.6rem;
+}
+.container #main-doc .main-section__list--item {
+  margin: 1.5rem 0 1.5rem 4rem;
+}
+.container #main-doc .main-section__span {
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 813px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 650px) {
+  html {
+    font-size: 43.8%;
+  }
+
+  #main-doc .main-section {
+    font-size: 100rem !important;
+  }
+}
+@media (max-width: 580px) {
+  html {
+    font-size: 38%;
+  }
+}

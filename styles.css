@@ -4,7 +4,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 10px;
 }
 
 body {
@@ -35,7 +35,6 @@ code {
   position: fixed;
   height: 100vh;
   width: 29rem;
-  max-width: 30rem;
 }
 .container .nav__heading {
   font-size: 2.4em;
@@ -49,7 +48,7 @@ code {
 .container .nav__list {
   list-style: none;
   position: absolute;
-  height: 85vh;
+  height: 89vh;
   width: 100%;
   overflow-y: scroll;
 }
@@ -102,22 +101,82 @@ code {
   margin-bottom: 2rem;
 }
 
-@media (max-width: 813px) {
+@media (max-width: 920px) {
   html {
-    font-size: 50%;
+    font-size: 8px;
+  }
+  .container #main-doc .main-section__paragraph{
+    font-size: 2.2rem;
+  }
+  .container #main-doc .main-section__list {
+    font-size: 2rem;
+  }
+  .container #main-doc .main-section__span {
+    font-size: 2.2rem;
   }
 }
-@media (max-width: 650px) {
-  html {
-    font-size: 43.8%;
-  }
-
+@media (max-width: 768px) {
   #main-doc .main-section {
     font-size: 100rem !important;
   }
+ .container #main-doc{
+    padding:3rem 2.5rem;
+  }
 }
-@media (max-width: 580px) {
+@media (max-width: 672px) {
   html {
-    font-size: 38%;
+    font-size: 7px;
+  }
+  .container #main-doc{
+    padding:2rem 1.5rem;
+  }
+  .container #main-doc .main-section__paragraph{
+    font-size: 2.5rem;
+  }
+  .container #main-doc .main-section__list {
+    font-size: 2.6rem;
+  }
+  .container #main-doc .main-section__span {
+    font-size: 2.5rem;
+  }
+  .container .nav__link, .container .nav__link:link, .container .nav__link:visited{
+    font-size:2rem;
+  }
+}
+@media(max-width: 576px){
+  .container{
+    display: block;
+  }
+  .container .nav {
+    position: relative; 
+    width:100vw;
+    height:45vh;
+    overflow-y: scroll;
+    border-right: none;
+    z-index:200;
+    
+  }
+  .container .nav__item {
+    padding: 1.5rem 2.5rem;
+    background:#fff;
+  }
+  .container .nav__list {
+    position: absolute;
+    top:7rem;
+    left: 0;
+    width:100vw;
+    
+  }
+  .container #main-doc{
+    position: relative;
+  }
+  @media(max-width:360px){
+    .container #main-doc{
+      padding-left:0;
+    }
+    code{
+      width:50%;
+      margin:auto;
+    }
   }
 }
